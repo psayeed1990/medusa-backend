@@ -6,9 +6,9 @@
     "license": "MIT",
     "scripts": {
         "seed": "medusa seed -f ./data/seed.json",
-        "build": "babel src -d dist --extensions \".ts,.js\"",
+        "build": "npm run seed && babel src -d dist --extensions \".ts,.js\"",
         "dev": "medusa develop",
-        "start": "npm run seed && medusa start"
+        "start": "medusa start"
     },
     "dependencies": {
         "@medusajs/medusa": "^1.1.49",
